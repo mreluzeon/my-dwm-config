@@ -13,8 +13,8 @@ enum showtab_modes { showtab_never, showtab_auto, showtab_nmodes, showtab_always
 static const int showtab = showtab_auto;        /* Default tab bar show mode */
 static const int toptab  = False;               /* False means bottom tab bar */
 
-static const char *fonts[]          = { "monospace:size=10" };
-static const char dmenufont[]       = "monospace:size=10";
+static const char *fonts[]          = { "Fira Mono:size=10" };
+static const char dmenufont[]       = "Fira Mono:size=10";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -29,17 +29,21 @@ static const char *colors[][3]      = {
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
-static const Rule rules[] = {
-	/* xprop(1):
-	 *	WM_CLASS(STRING) = instance, class
-	 *	WM_NAME(STRING) = title
-	 */
-	/* class     instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
-	{ "URxvt",      NULL,     NULL,           0,         0,          1,          -1,        -1 },
-	{ "st-256color",NULL,     NULL,           0,         0,          1,          -1,        -1 },
-	{ NULL,      NULL,   "Volume Control", 0,         1,          1,          -1,        -1 },
-	{ NULL,      NULL,   "zathura",        0,         0,          1,          -1,        -1 },
-};
+// static const Rule rules[] = {
+// 	/* xprop(1):
+// 	 *	WM_CLASS(STRING) = instance, class
+// 	 *	WM_NAME(STRING) = title
+// 	 */
+// 	/* class     instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
+// 	{ "URxvt",      NULL,     NULL,           0,         0,          1,          -1,        -1 },
+// 	{ "st-256color",NULL,     NULL,           0,         0,          1,          -1,        -1 },
+// 	{ NULL,      NULL,   "Volume Control", 0,         1,          1,          -1,        -1 },
+// 	{ NULL,      NULL,   "zathura",        0,         0,          1,          -1,        -1 },
+// 	{ NULL,      NULL,   "Figure 1",        0,         0,          1,          -1,        -1 },
+// 	{ NULL,      NULL,   "Media viewer",        0,         1,          0,          -1,        -1 },
+// 	{ "r_x11",      NULL,   NULL,        0,         1,          0,          -1,        -1 },
+// 	{ NULL,      NULL,   "FLOAT",        0,         1,          0,          -1,        -1 },
+// };
 
 /* layout(s) */
 static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
